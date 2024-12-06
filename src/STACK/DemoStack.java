@@ -25,6 +25,15 @@ class MyStack{
         for(int i=0; i<=top; i++)
             System.out.print(array[i]+" ");
     }
+    public void display2(){
+        for(int i=0; i<size; i++){
+            if(i<=top)
+                System.out.println("tumpukan ke-"+(i+1)+" : "+array[i]+" ");
+            else
+                System.out.println("tumpukan ke-"+(i+1)+" : kosong");
+        }
+            
+    }
     public void reset(){
         top = -1;//mengubah nilai top ke awal yaitu -1
     }
@@ -37,7 +46,7 @@ class MyStack{
 }
 public class DemoStack {
     public static void main(String[] args) {
-        MyStack myS = new MyStack(20);
+        MyStack myS = new MyStack(10);
         myS.push(20);
         myS.push(10);
         myS.push(40);
@@ -45,9 +54,9 @@ public class DemoStack {
         myS.push(70);
         myS.push(80);
         
-        myS.pop();
-        System.out.println(myS.isFull());
-        myS.display();
+        //myS.pop();
+        //System.out.println(myS.isFull());
+        myS.display2();
         
     }
 }
